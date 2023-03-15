@@ -19,12 +19,6 @@ simple_moment_of_inertia = (beam_width*(beam_depth))/12
 
 simple_maximum_perm_deflection = (164*(full_length**3))/48*e*simple_moment_of_inertia
 
-
-def ksi_to_gpa(input):
-    output
-
-    return output
-
 def main():
     print("Permenant deflection is.. ",simple_maximum_perm_deflection)
     print("Simple moment of inertia..",simple_moment_of_inertia)
