@@ -20,6 +20,6 @@ def main():
     print("Fixed maximum deflection: ", fixed_maximum_perm_deflection, "m")
     print("Beam width: ", beam_width, "m")
     print("Beam depth: ", beam_depth, "m")
-    print("Modulus of elasticity (E): ", e, "N/m^2")
+    print("Modulus (E): ", e, "N/m^2")
 
 main()
