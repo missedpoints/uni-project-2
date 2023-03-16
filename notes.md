@@ -165,7 +165,7 @@ Moment of inertia for 1 should be (width of beam x depth of beam^3)/12
 
 For maximum permanent deflection should be
 
-(Maximum forcelength of beam^3 ) / 48ei
+(Maximum force*length of beam^3)/48ei
 
 E is Young’s modulus which is 2.110^5
 i is moment of inertia
