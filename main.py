@@ -1,6 +1,4 @@
-import math
-import matlab
-import matplotlib
+from time import sleep
 e = 2.11e5 * 0.006895 # Original modulus was provided in KSI. Converted to Gigapascals.
 
 full_length = 88 / 100  # Convert mm to m
@@ -48,7 +46,10 @@ def main():
     print(f"Fixed maximum deflection: {fixed_maximum_perm_deflection}m")
     print(f"Modulus (E): {e}",  "Gigapascals")
     Simple_Bending_Moment(simple_applied_loads,full_length)
+    sleep(5)
     Cantilever_Bending_Moment(cantilever_applied_loads,full_length)
+    sleep(5)
     Fixed_Bending_Moment(fixed_applied_loads,full_length)
+    sleep(5)
 
 main()
