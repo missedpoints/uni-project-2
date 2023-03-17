@@ -4,7 +4,7 @@ import matplotlib
 e = 2.11e5 * 6895 # Convert ksi to Pa (1 ksi = 6895 Pa)
 e = e * 1000 # Convert to N/m^2 (Pa)
 
-full_length = 88 / 1000  # Convert mm to m
+full_length = 88 / 100  # Convert mm to m
 beam_width = 7 / 1000  # Convert mm to m
 beam_depth = 8 / 1000  # Convert mm to m
 
