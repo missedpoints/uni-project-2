@@ -23,17 +23,17 @@ simple_applied_loads = [164,140,120,100,80,60,40,20,0]
 def Simple_Bending_Moment(applied_loads,L):
     for load in applied_loads:
         M_max = (load * L) / 4
-        print(f"Theoretical stress for Fixed at {M_max} is: {(M_max*(full_length/2))/e}M.")
+        print(f"Theoretical stress for Fixed at {M_max} Newtons is: {(M_max*(full_length/2))/e}meters.")
 
 def Cantilever_Bending_Moment(applied_loads,L):
     for load in applied_loads:
         M_max = (load * (L**2)) / 8
-        print(f"Theoretical stress for Fixed at {M_max} is: {(M_max*(full_length/2))/e}M.")
+        print(f"Theoretical stress for Fixed at {M_max} Newtons is: {(M_max*(full_length/2))/e}meters.")
 
 def Fixed_Bending_Moment(applied_loads,L):
     for load in applied_loads:
         M_max = (load * (L**2)) / 16
-        print(f"Theoretical stress for Fixed at {M_max} is: {(M_max*(full_length/2))/e}M.")
+        print(f"Theoretical stress for Fixed at {M_max} Newtons is: {(M_max*(full_length/2))/e}meters.")
 
 
 def main():
