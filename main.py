@@ -16,8 +16,8 @@ cantilever_maximum_perm_deflection = (7*242*(full_length**3))/768*e*moment_of_in
 fixed_maximum_perm_deflection = (250*(full_length**3))/192*e*moment_of_inertia
 ######################################################################################
 
-displacements = [0,2,4,6,8,10,12,14,16,18,20,22,24,26]
-cantilever_applied_loads = []
+displacements = [0,2,4,6,8,10,12,14,16,18,20,22,24,26] ## kind of useless, couldn't find a use for it.
+cantilever_applied_loads = [] 
 fixed_applied_loads = []
 simple_applied_loads = []
 
@@ -26,17 +26,22 @@ def Simple_Bending_Moment(applied_loads,L):
     for load in applied_loads:
         M_max = (load * L) / 4
         print(f"Applied Load: {load} N, Maximum Bending Moment: {M_max} Nm")
+        Hookes_Law(M_max)
 
 def Cantilever_Bending_Moment(applied_loads,L):
     for load in applied_loads:
         M_max = (load * (L**2)) / 8
         print(f"Applied Load: {load} N, Maximum Bending Moment: {M_max} Nm")
+        Hookes_Law(M_max)
 
 def Fixed_Bending_Moment(applied_loads,L):
     for load in applied_loads:
         M_max = (load * (L**2)) / 16
         print(f"Applied Load: {load} N, Maximum Bending Moment: {M_max} Nm")
+        Hookes_Law(M_max)
 
+def Hookes_Law(bendingmoment,L):
+    return (bendingmoment*(full_length/2))/e
 
 
 def main():
