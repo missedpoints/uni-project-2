@@ -23,20 +23,17 @@ simple_applied_loads = [164,140,120,100,80,60,40,20,0]
 def Simple_Bending_Moment(applied_loads,L):
     for load in applied_loads:
         M_max = (load * L) / 4
-        print(f"Applied Load: {load} N, Maximum Bending Moment: {M_max} Nm")
-        print(f"Theoretical stress for Simple is: {(M_max*(full_length/2))/e}M.")
+        print(f"Theoretical stress for Fixed at {M_max} is: {(M_max*(full_length/2))/e}M.")
 
 def Cantilever_Bending_Moment(applied_loads,L):
     for load in applied_loads:
         M_max = (load * (L**2)) / 8
-        print(f"Applied Load: {load} N, Maximum Bending Moment: {M_max} Nm")
-        print(f"Theoretical stress for Cantilever is: {(M_max*(full_length/2))/e}M.")
+        print(f"Theoretical stress for Fixed at {M_max} is: {(M_max*(full_length/2))/e}M.")
 
 def Fixed_Bending_Moment(applied_loads,L):
     for load in applied_loads:
         M_max = (load * (L**2)) / 16
-        print(f"Applied Load: {load} N, Maximum Bending Moment: {M_max} Nm")
-        print(f"Theoretical stress for Fixed is: {(M_max*(full_length/2))/e}M.")
+        print(f"Theoretical stress for Fixed at {M_max} is: {(M_max*(full_length/2))/e}M.")
 
 
 def main():
@@ -46,10 +43,10 @@ def main():
     print(f"Fixed maximum deflection: {fixed_maximum_perm_deflection}m")
     print(f"Modulus (E): {e}",  "Gigapascals")
     Simple_Bending_Moment(simple_applied_loads,full_length)
-    sleep(5)
+    sleep(2)
     Cantilever_Bending_Moment(cantilever_applied_loads,full_length)
-    sleep(5)
+    sleep(2)
     Fixed_Bending_Moment(fixed_applied_loads,full_length)
-    sleep(5)
+    sleep(2)
 
 main()
